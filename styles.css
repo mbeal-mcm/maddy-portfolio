@@ -25,48 +25,31 @@ a:hover{ opacity: .85; }
   margin: 0 auto;
 }
 
-/* Top nav like apple.com */
 .globalnav{
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 44px;
-  border-bottom: 1px solid var(--hairline);
-  background: rgba(255,255,255,.72);
-  backdrop-filter: saturate(160%) blur(18px);
-  -webkit-backdrop-filter: saturate(160%) blur(18px);
-}
-
-.globalnav__inner{
-  width: min(var(--wrap), calc(100% - 24px));
-  height: 44px;
-  margin: 0 auto;
+  height: 48px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
   display: flex;
   align-items: center;
-  gap: 22px;
-}
-
-.globalnav__logo{
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  font-size: 16px;
-  color: var(--text);
 }
 
 .globalnav__menu{
+  width: 100%;
   display: flex;
+  justify-content: space-evenly; /* THIS makes it evenly spaced */
   align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
 }
 
 .globalnav__menu a{
-  font-size: 12px;
-  color: var(--text);
-  opacity: .88;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d1d1f;
+  letter-spacing: .02em;
 }
 
 /* Big page title like the “iPhone” headline */
@@ -83,17 +66,40 @@ a:hover{ opacity: .85; }
 
 /* Your full-width header image */
 .headerHero{
+  position: relative;
   width: 100%;
-  padding: 0 0 28px;
+  height: clamp(320px, 50vw, 600px);
+  overflow: hidden;
 }
 
 .headerHero img{
   width: 100%;
-  height: clamp(240px, 42vw, 520px);
+  height: 100%;
   object-fit: cover;
   display: block;
-  /* Apple uses clean edges; if you want it card-like, add border-radius */
-  /* border-radius: 28px; */
+}
+
+/* Overlay */
+.heroOverlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.1),
+    rgba(0,0,0,.25)
+  );
+}
+
+.heroOverlay h1{
+  font-size: clamp(60px, 8vw, 120px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: white;
+  text-shadow: 0 10px 30px rgba(0,0,0,.35);
+  margin: 0;
 }
 
 /* Placeholder sections (so you can see scroll points) */
