@@ -210,3 +210,113 @@ h2{
   color:var(--muted);
   border-top:1px solid var(--hairline);
 }
+
+.sectionHeader { display:flex; flex-direction:column; gap:6px; }
+
+.highlights{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.highlightsNav{
+  border-radius: var(--radius);
+  border: 1px solid var(--cardBorder);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  backdrop-filter: saturate(150%) blur(14px);
+  -webkit-backdrop-filter: saturate(150%) blur(14px);
+  position: sticky;
+  top: 76px; /* sits nicely under your sticky nav */
+  height: fit-content;
+}
+
+.hTab{
+  width:100%;
+  text-align:left;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.hTab:hover{ color: var(--text); background: rgba(127,127,127,.08); }
+.hTab.isActive{
+  color: var(--text);
+  background: rgba(127,127,127,.10);
+  border-color: var(--hairline);
+}
+
+.hProgress{
+  margin-top: 10px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(127,127,127,.18);
+  overflow:hidden;
+}
+.hProgressBar{
+  height:100%;
+  width:0%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.15s linear;
+}
+
+.highlightsPanel{
+  border-radius: var(--radius);
+  border: 1px solid var(--cardBorder);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  min-height: 420px;
+}
+
+.hMedia{ background: rgba(127,127,127,.08); }
+.hMedia img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.hCopy{
+  padding: 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  justify-content:center;
+}
+
+.hCopy h3{
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 28px);
+  letter-spacing: -0.02em;
+}
+
+.hDots{ display:flex; gap:8px; margin-top: 6px; }
+.hDot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: transparent;
+  cursor:pointer;
+}
+.hDot.isActive{
+  background: var(--accent);
+  border-color: transparent;
+}
+
+@media (max-width: 920px){
+  .highlights{ grid-template-columns: 1fr; }
+  .highlightsNav{ position: relative; top: 0; }
+  .highlightsPanel{ grid-template-columns: 1fr; }
+  .hMedia{ height: 320px; }
+}
