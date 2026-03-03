@@ -4,31 +4,31 @@ const highlights = [
   {
     title: "Community builder.",
     text: "I care about making spaces where people feel seen and supported — and I’m comfortable taking the first step to make that happen.",
-    img: "assets/highlight-1.jpeg",
+    img: "highlight-1.jpeg",
     alt: "Maddy in a community/leadership moment"
   },
   {
     title: "Calm under pressure.",
     text: "When things get messy, I simplify. I ask the right questions, write down decisions, and keep momentum without drama.",
-    img: "assets/highlight-2.jpeg",
+    img: "highlight-2.jpeg",
     alt: "Maddy in a calm, focused moment"
   },
   {
     title: "Friendly competitor.",
     text: "I love games and puzzles because they reward strategy, practice, and curiosity — and they bring people together.",
-    img: "assets/highlight-3.jpeg",
+    img: "highlight-3.jpeg",
     alt: "Maddy at a board game / card game event"
   },
   {
     title: "High-ownership follow-through.",
     text: "If I say I’ll do it, it gets done. I like turning big goals into small steps and clear next actions.",
-    img: "assets/highlight-4.jpeg",
+    img: "highlight-4.jpeg",
     alt: "Maddy working / planning / organizing"
   },
   {
     title: "Always learning.",
     text: "I’m happiest when I’m improving — whether that’s strength training, building something new, or getting better at how I collaborate.",
-    img: "assets/highlight-5.jpeg",
+    img: "highlight-5.jpeg",
     alt: "Maddy hiking / learning / training moment"
   }
 ];
